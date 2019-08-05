@@ -1,0 +1,15 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": "5432",
+  "username": "postgres",
+  "password": "postgres",
+  "database": "aimbra_education",
+  "schema": "security",
+  "logging": true,
+  "synchronize": true,
+  "entities": [
+    "./src/**/*.entity.ts",
+    "./dist/**/*.entity.js"
+  ]
+}
