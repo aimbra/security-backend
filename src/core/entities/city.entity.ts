@@ -2,7 +2,7 @@ import { FederateUnit } from './federate-unit.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('cities')
-export class City {
+export class CityEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 

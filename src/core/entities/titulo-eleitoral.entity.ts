@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('titulos_eleitorais')
-export class TituloEleitoral {
+export class TituloEleitoralEntity {
 
   @PrimaryGeneratedColumn('uuid')
   private _id: any;

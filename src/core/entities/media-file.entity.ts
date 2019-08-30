@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('storage_media_files')
-export class MediaFile {
+export class MediaFileEntity {
   @PrimaryGeneratedColumn('uuid', { name: 'id' })
   private _id: any;
 

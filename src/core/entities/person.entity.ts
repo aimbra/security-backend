@@ -1,17 +1,18 @@
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+
 import { Gender } from '../enums/gender.model';
 import { MaritalStatus } from '../enums/marital-status.model';
 import { Breed } from '../enums/breed.model';
-import { RegistroGeral } from './registro-geral.entity';
-import { CadastroPessoaFisica } from './cadastro-pessoa-fisica.entity';
-import { TituloEleitoral } from './titulo-eleitoral.entity';
-import { CertificadoReservista } from './certificado-reservista.entity';
-import { Address } from 'cluster';
-import { Phone } from './phone.entity';
-import { Email } from './email.entity';
-import { SocialMedia } from './social-media.entity';
-import { DigitalizedDocument } from './digitalized-documents.entity';
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { MediaFile } from './media-file.entity';
+import { RegistroGeralEntity } from './registro-geral.entity';
+import { CadastroPessoaFisicaEntity } from './cadastro-pessoa-fisica.entity';
+import { TituloEleitoralEntity } from './titulo-eleitoral.entity';
+import { CertificadoReservistaEntity } from './certificado-reservista.entity';
+import { PhoneEntity } from './phone.entity';
+import { EmailEntity } from './email.entity';
+import { SocialMediaEntity } from './social-media.entity';
+import { DigitalizedDocumentEntity } from './digitalized-documents.entity';
+import { MediaFileEntity } from './media-file.entity';
+import { AddressEntity } from './address.entity';
 
 @Entity('persons')
 export class Person {
@@ -42,16 +43,16 @@ export class Person {
   @Column({ name: 'breed', type: 'varchar', length: 31 })
   private _breed: Breed;
 
-  private _rg: RegistroGeral;
-  private _cpf: CadastroPessoaFisica;
-  private _tituloEleitoral: TituloEleitoral;
-  private _certificadoReservista: CertificadoReservista;
-  private _address: Address;
-  private _phones: Phone[];
-  private _emails: Email[];
-  private _socialMedia: SocialMedia[];
-  private _digitalizedDocuments: DigitalizedDocument[];
-  private _perfilImage: MediaFile;
+  private _rg: RegistroGeralEntity;
+  private _cpf: CadastroPessoaFisicaEntity;
+  private _tituloEleitoral: TituloEleitoralEntity;
+  private _certificadoReservista: CertificadoReservistaEntity;
+  private _address: AddressEntity;
+  private _phones: PhoneEntity[];
+  private _emails: EmailEntity[];
+  private _socialMedia: SocialMediaEntity[];
+  private _digitalizedDocuments: DigitalizedDocumentEntity[];
+  private _perfilImage: MediaFileEntity;
 
   public get id(): any {
     return this._id;
@@ -125,83 +126,83 @@ export class Person {
     this._breed = value;
   }
 
-  public get rg(): RegistroGeral {
+  public get rg(): RegistroGeralEntity {
     return this._rg;
   }
 
-  public set rg(value: RegistroGeral) {
+  public set rg(value: RegistroGeralEntity) {
     this._rg = value;
   }
 
-  public get cpf(): CadastroPessoaFisica {
+  public get cpf(): CadastroPessoaFisicaEntity {
     return this._cpf;
   }
 
-  public set cpf(value: CadastroPessoaFisica) {
+  public set cpf(value: CadastroPessoaFisicaEntity) {
     this._cpf = value;
   }
 
-  public get tituloEleitoral(): TituloEleitoral {
+  public get tituloEleitoral(): TituloEleitoralEntity {
     return this._tituloEleitoral;
   }
 
-  public set tituloEleitoral(value: TituloEleitoral) {
+  public set tituloEleitoral(value: TituloEleitoralEntity) {
     this._tituloEleitoral = value;
   }
 
-  public get certificadoReservista(): CertificadoReservista {
+  public get certificadoReservista(): CertificadoReservistaEntity {
     return this._certificadoReservista;
   }
 
-  public set certificadoReservista(value: CertificadoReservista) {
+  public set certificadoReservista(value: CertificadoReservistaEntity) {
     this._certificadoReservista = value;
   }
 
-  public get address(): Address {
+  public get address(): AddressEntity {
     return this._address;
   }
 
-  public set address(value: Address) {
+  public set address(value: AddressEntity) {
     this._address = value;
   }
 
-  public get phones(): Phone[] {
+  public get phones(): PhoneEntity[] {
     return this._phones;
   }
 
-  public set phones(value: Phone[]) {
+  public set phones(value: PhoneEntity[]) {
     this._phones = value;
   }
 
-  public get emails(): Email[] {
+  public get emails(): EmailEntity[] {
     return this._emails;
   }
 
-  public set emails(value: Email[]) {
+  public set emails(value: EmailEntity[]) {
     this._emails = value;
   }
 
-  public get socialMedia(): SocialMedia[] {
+  public get socialMedia(): SocialMediaEntity[] {
     return this._socialMedia;
   }
 
-  public set socialMedia(value: SocialMedia[]) {
+  public set socialMedia(value: SocialMediaEntity[]) {
     this._socialMedia = value;
   }
 
-  public get digitalizedDocuments(): DigitalizedDocument[] {
+  public get digitalizedDocuments(): DigitalizedDocumentEntity[] {
     return this._digitalizedDocuments;
   }
 
-  public set digitalizedDocuments(value: DigitalizedDocument[]) {
+  public set digitalizedDocuments(value: DigitalizedDocumentEntity[]) {
     this._digitalizedDocuments = value;
   }
 
-  public get perfilImage(): MediaFile {
+  public get perfilImage(): MediaFileEntity {
     return this._perfilImage;
   }
 
-  public set perfilImage(value: MediaFile) {
+  public set perfilImage(value: MediaFileEntity) {
     this._perfilImage = value;
   }
 }

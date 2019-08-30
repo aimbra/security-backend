@@ -6,4 +6,5 @@ export enum SocialMediaType {
   whatsapp = 'whatsapp',
   youtube = 'youtube',
   tumbrl = 'tumbrl',
+  linkedin = 'linkedin',
 }

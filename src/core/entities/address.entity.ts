@@ -1,11 +1,11 @@
 import { PublicPlaceType } from '../enums/public-place-type.model';
-import { District } from './district.entity';
-import { City } from './city.entity';
+import { DistrictEntity } from './district.entity';
+import { CityEntity } from './city.entity';
 import { FederateUnit } from './federate-unit.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('addresses')
-export class Address {
+export class AddressEntity {
 
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
@@ -16,8 +16,8 @@ export class Address {
   @Column({ name: 'public_place_type', type: 'varchar', length: 63 })
   private _publicPlaceType: PublicPlaceType;
 
-  private _district: District;
-  private _city: City;
+  private _district: DistrictEntity;
+  private _city: CityEntity;
   private _state: FederateUnit;
 
   public get id(): any {

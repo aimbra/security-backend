@@ -8,6 +8,9 @@ export class FederateUnit {
   @Column({ name: 'name', type: 'varchar', length: 63 })
   private _name: string;
 
+  @Column({ name: 'name', type: 'varchar', length: 3 })
+  private _initials: string;
+
   public get id(): any {
     return this._id;
   }
@@ -22,6 +25,14 @@ export class FederateUnit {
 
   public set name(value: string) {
     this._name = value;
+  }
+
+  public get initials(): string {
+    return this._initials;
+  }
+
+  public set initials(value: string) {
+    this._initials = value;
   }
 
 }

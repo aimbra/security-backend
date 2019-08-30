@@ -2,7 +2,7 @@ import { City } from './city.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('districts')
-export class District {
+export class DistrictEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 

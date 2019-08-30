@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('registros_gerais')
-export class RegistroGeral {
+export class RegistroGeralEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 

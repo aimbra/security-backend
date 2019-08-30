@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('certificados_reservistas')
-export class CertificadoReservista {
+export class CertificadoReservistaEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 

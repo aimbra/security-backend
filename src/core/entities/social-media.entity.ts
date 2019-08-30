@@ -2,7 +2,7 @@ import { SocialMediaType } from '../enums/social-media-type.model';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('social_medias')
-export class SocialMedia {
+export class SocialMediaEntity {
 
   @PrimaryGeneratedColumn('uuid')
   private _id: any;

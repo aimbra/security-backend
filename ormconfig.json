@@ -6,7 +6,6 @@
   "password": "postgres",
   "database": "aimbra_education",
   "schema": "security",
-  "logging": true,
   "synchronize": true,
   "entities": [
     "./src/**/*.entity.ts",

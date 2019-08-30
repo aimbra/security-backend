@@ -1,15 +1,15 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { MediaFile } from './media-file.entity';
+import { MediaFileEntity } from './media-file.entity';
 
 @Entity('digitalized_documents')
-export class DigitalizedDocument {
+export class DigitalizedDocumentEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 
   @Column({ name: 'reference_name', type: 'varchar', length: 63 })
   private _referenceName: string;
 
-  private _mediaFile: MediaFile;
+  private _mediaFile: MediaFileEntity;
 
   public get id(): any {
     return this._id;
@@ -27,11 +27,11 @@ export class DigitalizedDocument {
     this._referenceName = value;
   }
 
-  public get mediaFile(): MediaFile {
+  public get mediaFile(): MediaFileEntity {
     return this._mediaFile;
   }
 
-  public set mediaFile(value: MediaFile) {
+  public set mediaFile(value: MediaFileEntity) {
     this._mediaFile = value;
   }
 

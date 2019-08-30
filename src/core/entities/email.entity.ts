@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('emails')
-export class Email {
+export class EmailEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 
