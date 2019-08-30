@@ -1,11 +1,11 @@
-import { Profession } from './profession.entity';
-import { Person } from './person.entity';
-import { Phone } from './phone.entity';
+import { ProfessionEntity } from './profession.entity';
+import { PersonEntity } from './person.entity';
+import { PhoneEntity } from './phone.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { Company } from './company.entity';
+import { CompanyEntity } from './company.entity';
 
 @Entity('finacial_officers')
-export class FinancialOfficer {
+export class FinancialOfficerEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 
@@ -15,10 +15,10 @@ export class FinancialOfficer {
   @Column({ name: 'salary', type: 'numeric' })
   private _salary: number;
 
-  private _profession: Profession;
-  private _company: Company;
-  private _person: Person;
-  private _phone: Phone;
+  private _profession: ProfessionEntity;
+  private _company: CompanyEntity;
+  private _person: PersonEntity;
+  private _phone: PhoneEntity;
 
   public get id(): any {
     return this._id;
@@ -28,11 +28,11 @@ export class FinancialOfficer {
     this._id = value;
   }
 
-  public get company(): Company {
+  public get company(): CompanyEntity {
     return this._company;
   }
 
-  public set company(value: Company) {
+  public set company(value: CompanyEntity) {
     this._company = value;
   }
 
@@ -44,11 +44,11 @@ export class FinancialOfficer {
     this._actingTimeInMouth = value;
   }
 
-  public get profession(): Profession {
+  public get profession(): ProfessionEntity {
     return this._profession;
   }
 
-  public set profession(value: Profession) {
+  public set profession(value: ProfessionEntity) {
     this._profession = value;
   }
 
@@ -60,19 +60,19 @@ export class FinancialOfficer {
     this._salary = value;
   }
 
-  public get person(): Person {
+  public get person(): PersonEntity {
     return this._person;
   }
 
-  public set person(value: Person) {
+  public set person(value: PersonEntity) {
     this._person = value;
   }
 
-  public get phone(): Phone {
+  public get phone(): PhoneEntity {
     return this._phone;
   }
 
-  public set phone(value: Phone) {
+  public set phone(value: PhoneEntity) {
     this._phone = value;
   }
 }

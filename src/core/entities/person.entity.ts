@@ -15,7 +15,7 @@ import { MediaFileEntity } from './media-file.entity';
 import { AddressEntity } from './address.entity';
 
 @Entity('persons')
-export class Person {
+export class PersonEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 

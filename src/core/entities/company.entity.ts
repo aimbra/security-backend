@@ -1,19 +1,19 @@
-import { District } from './district.entity';
-import { City } from './city.entity';
-import { FederateUnit } from './federate-unit.entity';
+import { DistrictEntity } from './district.entity';
+import { CityEntity } from './city.entity';
+import { FederateUnitEntity } from './federate-unit.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('companies')
-export class Company {
+export class CompanyEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 
   @Column({ name: 'name', type: 'varchar', length: 127 })
   private _name: string;
 
-  private _district: District;
-  private _city: City;
-  private _federateUnit: FederateUnit;
+  private _district: DistrictEntity;
+  private _city: CityEntity;
+  private _federateUnit: FederateUnitEntity;
 
   public get id(): any {
     return this._id;
@@ -31,27 +31,27 @@ export class Company {
     this._name = value;
   }
 
-  public get district(): District {
+  public get district(): DistrictEntity {
     return this._district;
   }
 
-  public set district(value: District) {
+  public set district(value: DistrictEntity) {
     this._district = value;
   }
 
-  public get city(): City {
+  public get city(): CityEntity {
     return this._city;
   }
 
-  public set city(value: City) {
+  public set city(value: CityEntity) {
     this._city = value;
   }
 
-  public get federateUnit(): FederateUnit {
+  public get federateUnit(): FederateUnitEntity {
     return this._federateUnit;
   }
 
-  public set federateUnit(value: FederateUnit) {
+  public set federateUnit(value: FederateUnitEntity) {
     this._federateUnit = value;
   }
 }

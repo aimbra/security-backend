@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 import { AcademicInstituition } from './academic-instituition.entity';
 
 @Entity('academic_informations')
-export class AcademicInformation {
+export class AcademicInformationEntity {
   @PrimaryGeneratedColumn('uuid', {name: 'id'})
   private _id: any;
 
@@ -12,8 +12,8 @@ export class AcademicInformation {
   @Column({name: 'high_school_formation_year', type: 'timestamp'})
   private _highSchoolFormationYear: Date;
 
-  private _intituition: AcademicInstituition;
-  private _highSchoolFormation: AcademicInformation;
+  private _instituition: AcademicInstituition;
+  private _highSchoolFormation: AcademicInformationEntity;
 
   public get id(): any {
     return this._id;
@@ -31,12 +31,12 @@ export class AcademicInformation {
     this._isTransferred = value;
   }
 
-  public get intituition(): AcademicInstituition {
-    return this._intituition;
+  public get instituition(): AcademicInstituition {
+    return this._instituition;
   }
 
-  public set intituition(value: AcademicInstituition) {
-    this._intituition = value;
+  public set instituition(value: AcademicInstituition) {
+    this._instituition = value;
   }
 
   public get highSchoolFormationYear(): Date {
@@ -47,10 +47,10 @@ export class AcademicInformation {
     this._highSchoolFormationYear = value;
   }
 
-  public get highSchoolFormation(): AcademicInformation {
+  public get highSchoolFormation(): AcademicInformationEntity {
     return this._highSchoolFormation;
   }
-  public set highSchoolFormation(value: AcademicInformation) {
+  public set highSchoolFormation(value: AcademicInformationEntity) {
     this._highSchoolFormation = value;
   }
 }

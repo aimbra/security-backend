@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('federate_units')
-export class FederateUnit {
+export class FederateUnitEntity {
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
 

@@ -1,8 +1,8 @@
-import { Person } from './person.entity';
+import { PersonEntity } from './person.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('users')
-export class User {
+export class UserEntity {
 
   @PrimaryGeneratedColumn('uuid')
   private _id: any;
@@ -10,7 +10,7 @@ export class User {
   @Column({ name: 'username', type: 'varchar', length: 63 })
   private _username: string;
 
-  private _person: Person;
+  private _person: PersonEntity;
 
   public get id(): any {
     return this._id;
@@ -28,11 +28,11 @@ export class User {
     this._username = value;
   }
 
-  public get person(): Person {
+  public get person(): PersonEntity {
     return this._person;
   }
 
-  public set person(value: Person) {
+  public set person(value: PersonEntity) {
     this._person = value;
   }
 }

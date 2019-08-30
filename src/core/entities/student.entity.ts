@@ -1,20 +1,20 @@
-import { AcademicInformation } from './academic-information.entity';
-import { Person } from './person.entity';
+import { AcademicInformationEntity } from './academic-information.entity';
+import { PersonEntity } from './person.entity';
 import { Entity, Column } from 'typeorm';
 
 @Entity('students')
-export class Student extends Person {
+export class Student extends PersonEntity {
 
-  private _academicInformation: AcademicInformation;
+  private _academicInformation: AcademicInformationEntity;
 
   @Column({ name: 'registration_id', type: 'varchar', length: 31 })
   private _registrationId: any;
 
-  public get academicInformation(): AcademicInformation {
+  public get academicInformation(): AcademicInformationEntity {
     return this._academicInformation;
   }
 
-  public set academicInformation(value: AcademicInformation) {
+  public set academicInformation(value: AcademicInformationEntity) {
     this._academicInformation = value;
   }
 

@@ -1,5 +1,5 @@
-import { City } from './city.entity';
-import { FederateUnit } from './federate-unit.entity';
+import { CityEntity } from './city.entity';
+import { FederateUnitEntity } from './federate-unit.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('academic_instituitions')
@@ -11,8 +11,8 @@ export class AcademicInstituition {
   @Column({ name: 'name', type: 'varchar', length: 255 })
   private _name: string;
 
-  private _city: City;
-  private _uf: FederateUnit;
+  private _city: CityEntity;
+  private _uf: FederateUnitEntity;
 
   public get name(): string {
     return this._name;
@@ -30,19 +30,19 @@ export class AcademicInstituition {
     this._id = value;
   }
 
-  public get city(): City {
+  public get city(): CityEntity {
     return this._city;
   }
 
-  public set city(value: City) {
+  public set city(value: CityEntity) {
     this._city = value;
   }
 
-  public get uf(): FederateUnit {
+  public get uf(): FederateUnitEntity {
     return this._uf;
   }
 
-  public set uf(value: FederateUnit) {
+  public set uf(value: FederateUnitEntity) {
     this._uf = value;
   }
 }

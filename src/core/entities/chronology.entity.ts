@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity('chronologies')
-export class Chronology {
+export class ChronologyEntity {
   @PrimaryGeneratedColumn('uuid')
   private id: any;
 

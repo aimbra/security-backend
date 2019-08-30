@@ -1,4 +1,4 @@
-import { FederateUnit } from './federate-unit.entity';
+import { FederateUnitEntity } from './federate-unit.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('cities')
@@ -9,7 +9,7 @@ export class CityEntity {
   @Column({ name: 'name', type: 'varchar', length: 63})
   private _name: string;
 
-  private _federateUnit: FederateUnit;
+  private _uf: FederateUnitEntity;
 
   public get id(): any {
     return this._id;
@@ -27,11 +27,11 @@ export class CityEntity {
     this._name = value;
   }
 
-  public get federateUnit(): FederateUnit {
-    return this._federateUnit;
+  public get federateUnit(): FederateUnitEntity {
+    return this._uf;
   }
 
-  public set federateUnit(value: FederateUnit) {
-    this._federateUnit = value;
+  public set federateUnit(value: FederateUnitEntity) {
+    this._uf = value;
   }
 }
